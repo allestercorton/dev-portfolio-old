@@ -4,6 +4,7 @@ Date started: July 3, 2023
 Date Done: July 7, 2023 (windows design)
 Date Done: July 16, 2023 (Functionalities with JS)
 Date Done: July 17 (Officially done)
+Date Done: July 18 (first Update)
 
 
 -- Hero title html code emoji --

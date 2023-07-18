@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     console.log('test');
     
     // header scroll event
@@ -53,89 +52,26 @@ document.addEventListener('DOMContentLoaded', () => {
         isOpen = false;
     };
 
-    // form input keydown focus event
-    const jobTitleInput = document.querySelector('#job-title');
-    const jobDescriptionInput = document.querySelector('#job-description');
-    const jobSalaryInput = document.querySelector('#job-salary');
-    const submitButton = document.querySelector('#submit');
-
-    jobTitleInput.addEventListener('keydown', (e) => {
-        jobTitleKeyPress(e);
-    });
-
-    jobDescriptionInput.addEventListener('keydown', (e) => {
-        jobDescriptionKeyPress(e);
-    });
-
-    jobSalaryInput.addEventListener('keydown', (e) => {
-        salaryKeyPress(e);
-    });
-
-    const jobTitleKeyPress = (e) => {
-        if (e.keyCode === 13) {
-            e.preventDefault();
-            jobDescriptionInput.focus();
-        }
-    };
-
-    const jobDescriptionKeyPress = (e) => {
-        if (e.keyCode === 13) {
-            e.preventDefault();
-            jobSalaryInput.focus();
-        }
-    };
-
-    const salaryKeyPress = (e) => {
-        if (e.keyCode === 13) {
-            e.preventDefault();
-            submitButton.focus();
-        }
-    };
-
     // download CV
     const downloadCv = document.querySelector('#download-cv');
 
     downloadCv.addEventListener('click', () => {
         const link = document.createElement('a');
-        link.href = 'pdf/Allester-CV.pdf'; // path to your CV file
+        link.href = 'pdf/Allester-CV.pdf'; // path of the CV file
         link.download = 'Allester-Corton-CV.pdf'; // desired file name for download
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     });
 
-    // hire me submit with email js
-    (function () {
-        emailjs.init('WEBnhtsg3U-L4PVMe'); // emailjs public key
-    })();
-      
-    const hiremeForm = document.querySelector('#hireme-form');
-    
-    hiremeForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-      
-        const jobTitleInput = document.querySelector('#job-title');
-        const jobDescriptionInput = document.querySelector('#job-description');
-        const jobSalaryInput = document.querySelector('#job-salary');
-      
-        let params = {
-            title: jobTitleInput.value,
-            description: jobDescriptionInput.value,
-            salary: jobSalaryInput.value
-        };
-      
-        const serviceID = 'service_tuqmahq'; // emailjs service ID
-        const templateID = 'template_8u42fhn'; // emailjs template ID
-      
-        emailjs
-            .send(serviceID, templateID, params)
-            .then((res) => {
-                jobTitleInput.value = '';
-                jobDescriptionInput.value = '';
-                jobSalaryInput.value = '';
-                console.log(res);
-                alert('Hire Message Sent');
-            })
-            .catch((err) => console.log(err));
+    // hide hash URL
+    const removeHash = document.querySelectorAll('a');
+
+    removeHash.forEach(link => {
+        link.addEventListener('click', () => {
+            setTimeout(function() {
+                history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+            }, 0);
+        });
     });
 });

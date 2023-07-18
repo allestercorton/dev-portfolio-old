@@ -318,53 +318,6 @@ body {
     line-height: 1.8rem;
     color: #4d4c4c;
 }
-/* hire section */
-.hire {
-    position: relative;
-    background-color: #ffffff;
-}
-.hire .cont {
-    width: 70%;
-    margin: 8rem auto 8rem;
-}
-.hire .title {
-    margin-bottom: 4rem;
-}
-.hire h3 {
-    color: #007bff;
-    margin-bottom: 0.8rem;
-}
-.hire h2 {
-    font-weight: 900;
-}
-.hire div {
-    margin-bottom: 1.2rem;
-}
-.hire label {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #333333;
-}
-.hire input[type="text"],
-.hire textarea {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: #fcfcfc;
-    border: 1px solid #333333;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 0.2rem;
-    font-size: 1rem;
-    color: #000000;
-}
-.hire textarea {
-    height: 8rem;
-}
-.hire input[type="text"]:focus,
-.hire textarea:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
 /* contact section */
 .contact {
     position: relative;
@@ -390,7 +343,7 @@ body {
 .contact .info {
    display: flex;
    flex-direction: column;
-   gap: 2rem;
+   gap: 3.4rem;
 }
 .contact h4 {
     margin-bottom: 0.4rem;
@@ -514,9 +467,6 @@ footer {
     .projects img{
         max-height: 13rem;
     }
-    .hire .cont {
-        width: 76%;
-    }
 }
 @media (max-width: 500px) {
     .header {
@@ -533,9 +483,6 @@ footer {
         margin: 0 auto;
     }
     .projects .cont {
-        width: 86%;
-    }
-    .hire .cont {
         width: 86%;
     }
 }
@@ -558,9 +505,6 @@ footer {
         max-width: 14rem;
     }
     .projects .cont {
-        width: 90%;
-    }
-    .hire .cont {
         width: 90%;
     }
 }
