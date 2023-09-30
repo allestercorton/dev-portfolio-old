@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('test');
+    console.log('EverDev');
     
     // header scroll event
     const header = document.querySelector('.header');
@@ -62,16 +62,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-    });
-
-    // hide hash URL
-    const removeHash = document.querySelectorAll('a');
-
-    removeHash.forEach(link => {
-        link.addEventListener('click', () => {
-            setTimeout(function() {
-                history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
-            }, 0);
-        });
     });
 });
