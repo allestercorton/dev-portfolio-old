@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     downloadCv.addEventListener('click', () => {
         const link = document.createElement('a');
-        link.href = './asset/pdf/Corton-Resume.pdf'; // path of the Resume file
+        link.href = 'assets/pdf/Corton-Resume.pdf'; // path of the Resume file
         link.download = 'Allester-Corton-Resume.pdf'; // desired file name for download
         document.body.appendChild(link);
         link.click();
