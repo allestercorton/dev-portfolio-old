@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
         isOpen = false;
     };
 
-    // download CV
+    // download Resume
     const downloadCv = document.querySelector('#download-cv');
 
     downloadCv.addEventListener('click', () => {
         const link = document.createElement('a');
-        link.href = 'pdf/Allester-CV.pdf'; // path of the CV file
-        link.download = 'Allester-Corton-CV.pdf'; // desired file name for download
+        link.href = './asset/pdf/Corton-Resume.pdf'; // path of the Resume file
+        link.download = 'Allester-Corton-Resume.pdf'; // desired file name for download
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
